@@ -57,11 +57,11 @@ body{
   width:100vw;
   height:20vh;
   z-index: 20;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
 }
 @keyframes move {
   0%{}
   100%{transform: translateX(-30vw)}
-}
-#navbar{
-  //text-align: center;
 }

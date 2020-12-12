@@ -25,7 +25,7 @@ navbartype
     state.elements.cursor.style.display = 'none';
     console.log(state.elements);
     state.elements.container.classList.add('home')
-    state.elements.container.innerHTML = "Home         "
+    state.elements.container.innerHTML = "Home"
     navbartype2.start()
   })
   .start();
