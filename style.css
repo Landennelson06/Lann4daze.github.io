@@ -1,0 +1,67 @@
+@font-face{
+  font-family: DOS;
+  src: url(fonts/DOS.ttf);
+  font-display: block;
+  block-timeout: .3;
+}
+body{
+  margin:0px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:0px;
+  left:0px;
+  font-family: DOS;
+  width:100vw;
+  height: 50vh;
+  color:white;
+  z-index: 5;
+}
+
+.typecur{
+  --vis:visible;
+  visibility: var(--vis);
+}
+.glide{
+  margin-top:0px;
+  padding-top:0px;
+}
+.glide *{
+  margin-top:0px;
+  padding-top:0px;
+}
+.glide__slides, .glide__slide{
+  height:50vh;
+  font-family: DOS;
+  text-align: center;
+  background-color: red;
+}
+.docfot{
+  text-align:center;
+  position: absolute;
+  width:100vw;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  font-family: DOS;
+}
+#navbar{
+  background-color:navy;
+  position: absolute;
+  left: 0;
+  top:0;
+  width:100vw;
+  height:20vh;
+  z-index: 20;
+}
+@keyframes move {
+  0%{}
+  100%{transform: translateX(-30vw)}
+}
+#navbar{
+  //text-align: center;
+}
