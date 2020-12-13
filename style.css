@@ -6,6 +6,14 @@
 }
 body{
   margin:0px;
+  background-color: #181818;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .title{
@@ -17,9 +25,10 @@ body{
   left:0px;
   font-family: DOS;
   width:100vw;
-  height: 50vh;
+  height: 70vh;
   color:white;
   z-index: 5;
+  font-size: 62px;
 }
 
 .typecur{
@@ -35,10 +44,10 @@ body{
   padding-top:0px;
 }
 .glide__slides, .glide__slide{
-  height:50vh;
+  height:70vh;
   font-family: DOS;
   text-align: center;
-  background-color: red;
+  background-color:#101010 ;
 }
 .docfot{
   text-align:center;
@@ -48,20 +57,43 @@ body{
   left:0px;
   right:0px;
   font-family: DOS;
+  color:white;
+  font-size:20px;
 }
 #navbar{
-  background-color:navy;
+  background-color:rgba(0,0,0,.3);
   position: absolute;
   left: 0;
   top:0;
   width:100vw;
-  height:20vh;
+  height:6vh;
   z-index: 20;
   display: flex;
   //justify-content: center;
   align-items: center;
+  font-family:DOS;
 }
-@keyframes move {
-  0%{}
-  100%{transform: translateX(-30vw)}
+#navbar div{
+  height:6vh;
+  width:6vh;
+  margin-left:10px;
+  background-image: url(images/Lanntransparent.png);
+}
+.invis{
+  display:none;
+}
+#navbar span > :first-child{
+  margin-left: 100px;
+  cursor: pointer;
+}
+#navbar span #uno, #dos, #tres{
+  margin-left: 100px;
+  cursor: pointer;
+}
+#navbar span *{
+  color: white;
+  transition: color .5s linear;
+}
+#navbar span *:hover{
+  color:darkgray;
 }

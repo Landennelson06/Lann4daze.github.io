@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Lann4daze_</title>
-    <link rel="preload" href="/fonts/DOS.ttf"/>
+    <link rel="preload" href="/fonts/DOS.ttf" as='font' crossorigin="anonymous"/>
     <link rel="stylesheet" href="modal.css"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="glide/glide.core.css" type="text/css"/>
   </head>
   <body>
     <div id="navbar">
-      <span></span>
-      <span></span>
-      <span></span>
+      <div></div>
+      <span id='uno'></span>
+      <span id='dos'></span>
+      <span id='tres'></span>
     </div>
 <div class="glide">
   <div data-glide-el="track" class="glide__track">
@@ -26,7 +27,7 @@
   </div>
 </div>
     <div class="title">
-      <p>Lann4daze Does:<p id="Title"></p></p>
+      <span>Lann4daze Does:&nbsp;<span id="Title"></span></span>
     </div>
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -35,7 +36,6 @@
           <h2 class="modal__title" id="modal-1-title">
             Libraries Used
           </h2>
-          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
         <main class="modal__content" id="modal-1-content">
           <p>
@@ -46,14 +46,13 @@
           </p>
         </main>
         <footer class="modal__footer">
-          <button class="modal__btn modal__btn-primary">Continue</button>
           <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
         </footer>
       </div>
     </div>
   </div>
     <!--<button onclick="//MicroModal.show('modal-1');">Click</button>-->
-    <footer class="docfot">Created with <span>&lt</span>3 By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Check External Libraries used.</strong></a></footer>
+    <footer class="docfot">Created with <span>&lt;3</span> By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Check External Libraries used.</strong></a></footer>
     <script src="glide/glide.min.js"></script>
     <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
