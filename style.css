@@ -80,6 +80,7 @@ body{
   background-image: url("images/Lanntransparent.png");
   background-repeat:no-repeat;
   background-size:contain;
+  cursor:pointer;
 }
 .invis{
   display:none;
