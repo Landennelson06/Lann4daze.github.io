@@ -72,6 +72,7 @@ body{
   //justify-content: center;
   align-items: center;
   font-family:DOS;
+  font-size: 2.7vh;
 }
 #navbar div{
   height:6vh;
