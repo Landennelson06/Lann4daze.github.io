@@ -6,12 +6,70 @@
     <title>404 Error</title>
     <link rel="preload" href="/fonts/DOS.ttf" as='font' crossorigin="anonymous"/>
     <style>
+    @font-face{
+      font-family: DOS;
+      src: url(fonts/DOS.ttf);
+      font-display: block;
+      block-timeout: .3;
+    }
+    .Typewriter__cursor_1{
+      font-family:DOS;
+      font-size: 100px;
+    }
+    .Typewriter__cursor_2{
+      display:none;
+    }
     body{
       background-color: #181818;
+      color:white !important;
+    }
+    body a{
+      color:white;
+      cursor:pointer;
     }
     </style>
   </head>
   <body>
-    
+    <div style="text-align:center;margin:0; width:100vw; height:100vh; position:absolute; top:0px; left:0px; display:flex;  justify-content: center; align-items:center;">
+      <p><span id="404"></span><br>
+      <span id="404txt"></span></p>
+    </div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+    var notfound = document.getElementById('404')
+    var notfounttxt = document.getElementById('404txt')
+    var type404 = new Typewriter(notfound,{
+      cursor:'_',
+      loop:false,
+      delay:90,
+    })
+    type404
+      .callFunction(function(state){state.elements.cursor.classList.add('Typewriter__cursor_1')})
+      .typeString('<span style="text-align:center"><span style="font-family:DOS; font-size:100px;">404</span></span>')
+      .callFunction(function(state){state.elements.cursor.classList.remove('Typewriter__cursor_1');state.elements.cursor.classList.add('Typewriter__cursor_2'); typenotfound.start()})
+      //.typeString(<br><span>This Page is not found. If you belive this is an issue, Create an github issue here, or contact me</span>)
+      .start()
+    var typenotfound = new Typewriter(notfounttxt,{
+      cursor:'_',
+      loop:false,
+      delay:90,
+    })
+    document.getElementsByClassName('Typewriter__cursor')[1].style.display = 'none'
+    typenotfound
+      .callFunction(function(state){state.elements.cursor.style.display = 'inline'})
+      .pauseFor(200)
+      .typeString('<span style="font-family:DOS" font-size:20px;>This Page is not found.</span><br>')
+      .pauseFor(200)
+      .typeString('<span style="font-family:DOS" font-size:20px;>If you belive this is an issue,<br>Contact me <a href="#">Here</a>, Or create an Github issue <a href="#">Here</a>.</span>')
+      .pauseFor(200)
+      .typeString('<br>')
+      .pauseFor(200)
+      .typeString('<br>')
+      .pauseFor(100)
+      .typeString('<span style="font-family:DOS; font-size:20px;"><a href="#">Back To Homepage</a></span>')
+      .typeString('<br><br>')
+      .pauseFor(3000)
+      .typeString('<span style="font-family:DOS; font-size:20px;">Why are you still here?</span>')
+    </script>
   </body>
 </html>

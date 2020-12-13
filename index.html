@@ -12,22 +12,39 @@
   <body>
     <div id="navbar">
       <div></div>
-      <span id='uno'></span>
-      <span id='dos'></span>
+      <span onclick="link('title')" id='uno'></span>
+      <span onclick="link('works')" id='dos'></span>
+      <span id="quatro"></span>
       <span id='tres'></span>
     </div>
 <div class="glide">
   <div data-glide-el="track" class="glide__track">
     <div class="glide__slides">
-      <div id="1" class="glide__slide">1</div>
-      <div id="2" class="glide__slide">2</div>
-      <div id="3" class="glide__slide">3</div>
-      <div id="4" class="glide__slide">4</div>
+      <div id="1" class="glide__slide"></div>
+      <div id="2" class="glide__slide"></div>
+      <div id="3" class="glide__slide"></div>
+      <div id="4" class="glide__slide"></div>
     </div>
   </div>
 </div>
-    <div class="title">
+    <div class="title" id="title">
       <span>Lann4daze Does:&nbsp;<span id="Title"></span></span>
+    </div>
+    <div id="works" style="width:100vw; text-align:center; color:white; font-family:DOS; font-size:50px; margin-top:100px;">WORKS</div>
+    <div class="list-cont" id="list-cont">
+      <div id="list-content">
+        <div id="list-filter">
+          <p>
+          <span>Websites</span><br>
+          <span>Other thing</span><br>
+          <span>Other thing 2</span><br>
+          <span>Other thing 3</span><br>
+        </p>
+        </div>
+      <div id="list-list">
+        <div class="elem"></div>
+      </div>
+      </div>
     </div>
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -52,11 +69,13 @@
     </div>
   </div>
     <!--<button onclick="//MicroModal.show('modal-1');">Click</button>-->
-    <footer class="docfot">Created with <span>&lt;3</span> By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Check External Libraries used.</strong></a></footer>
+    <footer class="docfot">Created with <span>&lt;3</span> By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Credits</strong></a></footer>
     <script src="glide/glide.min.js"></script>
     <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://redom.js.org/redom.min.js"></script>
     <script src="script.js"></script>
+    <script src="listparser.js"></script>
     <script src="glide.js"></script>
   </body>
 </html>
