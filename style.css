@@ -104,11 +104,11 @@ body{
   text-decoration: none;
   color:white;
 }
-#navbar span *{
+#navbar span{
   color: white;
   transition: color .5s linear;
 }
-#navbar span *:hover{
+#navbar span:hover{
   color:;
 }
 .list-cont{
@@ -152,12 +152,54 @@ body{
   cursor: pointer;
 }
 #list-list{
+  position: relative;
   margin-left:22%;
   width:75%;
   height: 95%;
-  background: #181818;
+  background: red;
   border-radius: 15px;
+  z-index: 2;
 }
 .elem{
-  width:33%;
+  position: relative;
+  display: inline-block;
+  width:49.5%;
+  background: #101010;
+  height:50%;
+  border-radius: 10px;
+  overflow: scroll;
+  overflow-x:hidden;
+  z-index: 9999999;
+  transition: transform .5s ease;
+}
+.elem::-webkit-scrollbar{
+  display: none;
+}
+.elem:hover{
+  transform: scale(1.2);
+}
+.elem iframe{
+  margin-top:10px;
+  margin-left:8.5%;
+  border: 0;
+  border-radius: 10px;
+  width: 85%;
+  overflow: hidden;
+  transition: transform .5s ease;
+}
+.elem iframe:hover{
+  transform: scale(1.1);
+}
+.elem p{
+  font-size: 30px;
+  width:100%;
+  text-align: center;
+  color: white;
+  font-family: DOS;
+}
+.elem div{
+  width:100%;
+  text-align: center;
+  color:white;
+  font-family: DOS;
 }
