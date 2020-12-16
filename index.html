@@ -7,31 +7,42 @@
     <link rel="preload" href="/fonts/DOS.ttf" as='font' crossorigin="anonymous"/>
     <link rel="stylesheet" href="modal.css"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="glide/glide.core.css" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/portfolio-js@latest/dist/portfolio.css" />
     <link rel="icon" href="images/Lanntransparent.png" type="image/png"/>
   </head>
-  <body>
+  <body id="body">
+    <div class="sitepreview" id="preview">
+      <div id="clickenct" onclick="togglemodal('preview'); togglescroll()"></div>
+      <!--<div class="sitepreviewnavbar"><div style="cursor:pointer;" onclick="togglemodal('preview'); togglescroll()">Returb</div></div>-->
+      <div class="pf-carousel my-image-gallery">
+  <div class="pf-slider">
+    <div class="pf-item">
+      <img class="pf-item-image" data-src="https://example.com/thor.png" />
+      <div class="pf-item-description">
+        Photo by Jane Foster
+      </div>
+    </div>
+    <div class="pf-item">
+      <img class="pf-item-image" data-src="https://example.com/hulk_12.png" />
+      <div class="pf-item-description">
+        Photo by Betty Ross on Unsplash
+      </div>
+    </div>
+    <!-- Add more images -->
+  </div>
+</div>
+    </div>
     <div id="navbar">
       <div></div>
-      <span onclick="link('title')" id='uno'></span>
-      <span onclick="link('works')" id='dos'></span>
+      <span onclick="link('top')" id='uno'></span>
+      <span onclick="link('list-cont')" id='dos'></span>
       <span id="quatro"></span>
       <span id='tres'></span>
     </div>
-<div class="glide">
-  <div data-glide-el="track" class="glide__track">
-    <div class="glide__slides">
-      <div id="1" class="glide__slide"></div>
-      <div id="2" class="glide__slide"></div>
-      <div id="3" class="glide__slide"></div>
-      <div id="4" class="glide__slide"></div>
-    </div>
-  </div>
-</div>
+    <div id="top"></div>
     <div class="title" id="title">
       <span>Lann4daze Does:&nbsp;<span id="Title"></span></span>
     </div>
-    <div id="works" style="width:100vw; text-align:center; color:white; font-family:DOS; font-size:15.14vh; margin-top:100px;">WORKS</div>
     <div class="list-cont" id="list-cont">
       <div id="list-content">
         <div id="list-filter">
@@ -43,8 +54,11 @@
         </p>
         </div>
       <div id="list-list">
-        <a href="404.html"><div class="elem">
+        <a onclick="togglescroll(); togglemodal('preview')">
+          <div class="elem">
+        <div id="container">
         <iframe src="404.html"></iframe>
+        </div>
         <p>Title?</p>
         <div>This is a description.<br> It is cool.<br> It is supposed to be this big.<br> It describes what this project is, and what i learned with it.<br> Here's another sentence so that it overflows.<br> test test test test test test</div>
       </div></a>
@@ -63,8 +77,9 @@
           <p>
             Libraries used: <br>
             &bull;  <a target="_blank" href="https://micromodal.now.sh/"><code>Micromodal</code></a><br>
-            &bull;  <a target="_blank" href="https://glidejs.com/"><code>Glide.JS</code></a><br>
-            &bull;  <a target="_blank" href="https://github.com/tameemsafi/typewriterjs#readme"> <code>TypeWriter.JS</code></a>
+            &bull;  <a target="_blank" href="https://splidejs.com/"><code>Splide.JS</code></a><br>
+            &bull;  <a target="_blank" href="https://github.com/tameemsafi/typewriterjs#readme"> <code>TypeWriter.JS</code></a><br>
+            &bull;  <a target="_blank" href="https://redom.js.org/"> <code>RE:DOM</code></a>
           </p>
         </main>
         <footer class="modal__footer">
@@ -75,12 +90,12 @@
   </div>
     <!--<button onclick="//MicroModal.show('modal-1');">Click</button>-->
     <footer class="docfot" id="foot">Created with <span>&lt;3</span> By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Credits</strong></a></footer>
-    <script src="glide/glide.min.js"></script>
     <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/portfolio-js@latest/dist/portfolio.umd.js"></script>
     <script src="https://redom.js.org/redom.min.js"></script>
     <script src="script.js"></script>
+    <script src="carousel.js"></script>
     <script src="listparser.js"></script>
-    <script src="glide.js"></script>
   </body>
 </html>

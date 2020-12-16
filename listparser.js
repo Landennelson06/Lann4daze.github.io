@@ -9,8 +9,8 @@ document.fonts.ready.then(function () {
     const Portforlio = request.response;
     console.log(JSON.stringify(Portforlio))
   }
-  //var thing = el("span",{style:'color:red;'})
-  //mount(document.getElementById('list-cont'),thing)
+  //var thing = el("p",{style:'color:red;'})
+  //mount(document.getElementById('container'),thing)
   //thing.innerHTML  = 'hi'
 //fontready close
 })

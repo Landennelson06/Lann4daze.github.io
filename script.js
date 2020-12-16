@@ -1,4 +1,15 @@
 MicroModal.init();
+function togglescroll() {
+  if(document.body.style.overflow === ''){
+  document.body.style.overflow = 'hidden';
+} else {
+  document.body.style.overflow = ''
+}}
+function togglemodal(id){
+  document.getElementById(id)
+    .classList.toggle('is-open')
+}
+
 function link(id){
   document.getElementById(id).scrollIntoView(true);
 }
