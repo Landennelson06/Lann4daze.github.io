@@ -1,13 +1,17 @@
 MicroModal.init();
-function togglescroll() {
-  if(document.body.style.overflow === ''){
-  document.body.style.overflow = 'hidden';
-} else {
-  document.body.style.overflow = ''
-}}
-function togglemodal(id){
+function togglemodal(id,src){
   document.getElementById(id)
-    .classList.toggle('is-open')
+    .classList.toggle('is-open');
+    if(document.body.style.overflow === ''){
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = ''
+  }
+  if(src == null){
+    document.getElementById('frame').src = '404.html'
+  }else{
+    document.getElementById('frame').src = src
+  }
 }
 
 function link(id){

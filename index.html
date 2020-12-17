@@ -7,30 +7,16 @@
     <link rel="preload" href="/fonts/DOS.ttf" as='font' crossorigin="anonymous"/>
     <link rel="stylesheet" href="modal.css"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/portfolio-js@latest/dist/portfolio.css" />
     <link rel="icon" href="images/Lanntransparent.png" type="image/png"/>
   </head>
   <body id="body">
     <div class="sitepreview" id="preview">
-      <div id="clickenct" onclick="togglemodal('preview'); togglescroll()"></div>
-      <!--<div class="sitepreviewnavbar"><div style="cursor:pointer;" onclick="togglemodal('preview'); togglescroll()">Returb</div></div>-->
-      <div class="pf-carousel my-image-gallery">
-  <div class="pf-slider">
-    <div class="pf-item">
-      <img class="pf-item-image" data-src="https://example.com/thor.png" />
-      <div class="pf-item-description">
-        Photo by Jane Foster
+      <div class="sitepreviewnavbar">
+        <div style="cursor:pointer;" onclick="togglemodal('preview');">Returb</div>
+        <div class="titlee">Site Preview</div>
       </div>
-    </div>
-    <div class="pf-item">
-      <img class="pf-item-image" data-src="https://example.com/hulk_12.png" />
-      <div class="pf-item-description">
-        Photo by Betty Ross on Unsplash
-      </div>
-    </div>
-    <!-- Add more images -->
-  </div>
-</div>
+      <div id="clickenct" onclick="togglemodal('preview');"></div>
+      <iframe id="frame"></iframe>
     </div>
     <div id="navbar">
       <div></div>
@@ -47,21 +33,22 @@
       <div id="list-content">
         <div id="list-filter">
           <p>
-          <span>Websites</span><br>
+          <span onclick="filter('one')">Websites</span><br>
           <span>Other thing</span><br>
           <span>Other thing 2</span><br>
           <span>Other thing 3</span><br>
         </p>
         </div>
       <div id="list-list">
-        <a onclick="togglescroll(); togglemodal('preview')">
+        <!--Example Element-->
+        <!--<a onclick="togglemodal('preview','index.html')">
           <div class="elem">
         <div id="container">
         <iframe src="404.html"></iframe>
         </div>
         <p>Title?</p>
         <div>This is a description.<br> It is cool.<br> It is supposed to be this big.<br> It describes what this project is, and what i learned with it.<br> Here's another sentence so that it overflows.<br> test test test test test test</div>
-      </div></a>
+      </div></a>-->
       </div>
       </div>
     </div>
@@ -77,7 +64,6 @@
           <p>
             Libraries used: <br>
             &bull;  <a target="_blank" href="https://micromodal.now.sh/"><code>Micromodal</code></a><br>
-            &bull;  <a target="_blank" href="https://splidejs.com/"><code>Splide.JS</code></a><br>
             &bull;  <a target="_blank" href="https://github.com/tameemsafi/typewriterjs#readme"> <code>TypeWriter.JS</code></a><br>
             &bull;  <a target="_blank" href="https://redom.js.org/"> <code>RE:DOM</code></a>
           </p>
@@ -92,10 +78,8 @@
     <footer class="docfot" id="foot">Created with <span>&lt;3</span> By Lann4daze. <a style="cursor:pointer;" data-micromodal-trigger="modal-1"><strong>Credits</strong></a></footer>
     <script src="https://unpkg.com/micromodal@0.4.6/dist/micromodal.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="https://unpkg.com/portfolio-js@latest/dist/portfolio.umd.js"></script>
     <script src="https://redom.js.org/redom.min.js"></script>
     <script src="script.js"></script>
-    <script src="carousel.js"></script>
     <script src="listparser.js"></script>
   </body>
 </html>

@@ -1,16 +1,51 @@
 const { el, mount, list } = redom;
-document.fonts.ready.then(function () {
+var i = 0;
+var data;
+//document.fonts.ready.then(function () {
   var filerequest = 'Portforlio.json'
   var request = new XMLHttpRequest();
   request.open('GET',filerequest);
   request.responseType = 'json';
   request.send();
-  request.onload = function() {
-    const Portforlio = request.response;
-    console.log(JSON.stringify(Portforlio))
+  request.onload = function(){
+    data = request.response;
+    load()
   }
-  //var thing = el("p",{style:'color:red;'})
-  //mount(document.getElementById('container'),thing)
-  //thing.innerHTML  = 'hi'
+  function load() {
+    const Portforlio = data;
+    console.log(JSON.stringify(Portforlio));
+  while (i < Portforlio.sites.length){
+  const link = Portforlio.sites[i].link;
+  const iframe_element = el('div.container',el('iframe',{src: link}))
+  const title = el("p")
+  title.innerHTML = Portforlio.sites[i].title;
+  const desc = el('div')
+  desc.innerHTML = Portforlio.sites[i].description
+  const el1 = el('a',[el('div.elem',iframe_element,[title,desc])]);
+  el1
+    .onclick = function(){togglemodal('preview',link)}
+  mount(document.getElementById('list-list'), el1);
+  i++;
+}};
+function filter(e) {
+  //document.getElementById('list-list').innerHTML = '';
+  const Portforlio = data;
+  //console.log(JSON.stringify(Portforlio));
+while (i < Portforlio.sites.length){
+if('one' == Portforlio.sites[i].filter){
+  alert('what')
+const link = Portforlio.sites[i].link;
+const iframe_element = el('div.container',el('iframe',{src: link}))
+const title = el("p")
+title.innerHTML = Portforlio.sites[i].title;
+const desc = el('div')
+desc.innerHTML = Portforlio.sites[i].description
+const el1 = el('a',[el('div.elem',iframe_element,[title,desc])]);
+el1
+  .onclick = function(){togglemodal('preview',link)}
+mount(document.getElementById('list-list'), el1);
+i++;
+}
+}}
 //fontready close
-})
+//});
