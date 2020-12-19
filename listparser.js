@@ -1,7 +1,6 @@
 const { el, mount, list } = redom;
 var i = 0;
 var data;
-//document.fonts.ready.then(function () {
   var filerequest = 'Portforlio.json'
   var request = new XMLHttpRequest();
   request.open('GET',filerequest);
@@ -32,8 +31,6 @@ function filter(e) {
   const Portforlio = data;
   //console.log(JSON.stringify(Portforlio));
 while (i < Portforlio.sites.length){
-if('one' == Portforlio.sites[i].filter){
-  alert('what')
 const link = Portforlio.sites[i].link;
 const iframe_element = el('div.container',el('iframe',{src: link}))
 const title = el("p")
@@ -45,7 +42,4 @@ el1
   .onclick = function(){togglemodal('preview',link)}
 mount(document.getElementById('list-list'), el1);
 i++;
-}
 }}
-//fontready close
-//});

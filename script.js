@@ -106,3 +106,5 @@ if(!pageAccessedByReload){
       .callFunction(function(state){state.elements.cursor.style.display = 'none';})
 }
 });
+var d = new Date;
+document.getElementById('age').innerHTML = d.getFullYear() - 2006
