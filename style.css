@@ -268,7 +268,10 @@ body{
   align-items: center;
   width:100vw;
   height: 5vh;
-  background: blue;
+  background: #181818;
+  border: 3px #101010 solid;
+  color:white;
+  font-family: DOS;
 }
 .sitepreview.is-open{
   display: block;

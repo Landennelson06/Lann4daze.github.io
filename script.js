@@ -1,5 +1,5 @@
 MicroModal.init();
-function togglemodal(id,src){
+function togglemodal(id,src,title){
   document.getElementById(id)
     .classList.toggle('is-open');
     if(document.body.style.overflow === ''){
